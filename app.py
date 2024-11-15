@@ -3,7 +3,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 def get_gpt_response(user_input):
     system_message = {
