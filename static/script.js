@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             scrollToBottom(); // Scroll after user's message
             chatInput.value = "";
 
-            fetch("/chat", {
+            // Use the full URL to communicate with the Render backend
+            fetch("https://chatbot-cabq.onrender.com/chat", { 
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: userInput }),
